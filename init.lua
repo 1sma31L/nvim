@@ -4,7 +4,8 @@ require 'core.autocmd'
 require 'core.init-lazy'
 
 require('lazy').setup({
-
+  -- TODO: Create an init.lua file inside plugins so i can require it for
+  -- better 'go to definition'
   { import = 'plugins' },
 
   require 'themes.catppuccin',
