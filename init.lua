@@ -7,7 +7,7 @@ require('lazy').setup({
 
   { import = 'plugins' },
 
-  require 'themes.onedarkpro',
+  require 'themes.catppuccin',
 
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
