@@ -1,6 +1,6 @@
 require('lazy').setup({
   { import = 'plugins' },
-  require 'themes.catppuccin',
+  require 'colors.catppuccin',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
