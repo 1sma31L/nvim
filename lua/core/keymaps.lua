@@ -29,5 +29,3 @@ vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
 -- [Skip Lines]
 vim.keymap.set('n', '<leader>o', 'o<Esc>', { desc = 'Add line below' })
 vim.keymap.set('n', '<leader>O', 'O<Esc>', { desc = 'Add line above' })
-
--- vim.keymap.set('i', ':w', '<C-o>:w<CR><Esc>', { desc = 'Save file' })
