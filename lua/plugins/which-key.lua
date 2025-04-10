@@ -44,7 +44,8 @@ return {
       { '<leader>f', group = '[F]uzzy [F]ind' },
       { '<leader>w', group = '[W]orkspace' },
       { '<leader>t', group = '[T]oggle' },
-      { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      { '<leader>g', group = '[G]it hunk', mode = { 'n', 'v' } },
+      { '<leader>r', group = '[R]un', mode = { 'n' } },
     },
   },
 }

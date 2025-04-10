@@ -1,3 +1,5 @@
+local functions = require 'core.functions'
+
 -- [mapleader]
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -29,3 +31,11 @@ vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selection up' })
 -- [Skip Lines]
 vim.keymap.set('n', '<leader>o', 'o<Esc>', { desc = 'Add line below' })
 vim.keymap.set('n', '<leader>O', 'O<Esc>', { desc = 'Add line above' })
+
+-- [Terminal]
+vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm direction=horizontal<CR>', { desc = 'Toggle horizontal terminal' })
+vim.keymap.set('n', '<leader>tf', '<cmd>ToggleTerm direction=float<CR>', { desc = 'Toggle float terminal' })
+vim.keymap.set('n', '<leader>tv', '<cmd>ToggleTerm direction=vertical size=50<CR>', { desc = 'Toggle vertical terminal' })
+
+--[Run Code]
+vim.keymap.set('n', '<leader>r', functions.run_current_file, { desc = 'Run current file' })
