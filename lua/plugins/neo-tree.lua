@@ -9,6 +9,7 @@ return {
   cmd = 'Neotree',
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>e', ':Neotree toggle<CR>', desc = 'Toggle NeoTree', silent = true },
   },
   opts = {
     filesystem = {
@@ -18,6 +19,10 @@ return {
         never_show = {
           '.git',
           '.next',
+          'node_modules',
+          'dist',
+          'build',
+          '.cache',
         },
       },
       window = {

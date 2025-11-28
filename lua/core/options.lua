@@ -16,7 +16,7 @@ vim.g.have_nerd_font = true
 vim.opt.rtp:prepend(lazypath)
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.mouse = ''
+vim.opt.mouse = 'a'
 vim.opt.breakindent = true
 vim.opt.undofile = true
 vim.opt.ignorecase = true

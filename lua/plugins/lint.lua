@@ -4,9 +4,12 @@ return { -- Linting
   config = function()
     local lint = require 'lint'
     lint.linters_by_ft = {
+      typescript = { 'eslint_d' },
+      javascript = { 'eslint_d' },
+      typescriptreact = { 'eslint_d' },
+      javascriptreact = { 'eslint_d' },
       markdown = { 'markdownlint' },
     }
-
     -- To allow other plugins to add linters to require('lint').linters_by_ft,
     -- instead set linters_by_ft like this:
     -- lint.linters_by_ft = lint.linters_by_ft or {}
@@ -38,7 +41,6 @@ return { -- Linting
     -- lint.linters_by_ft['ruby'] = nil
     -- lint.linters_by_ft['terraform'] = nil
     -- lint.linters_by_ft['text'] = nil
-
     -- Create autocommand which carries out the actual linting
     -- on the specified events.
     local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })

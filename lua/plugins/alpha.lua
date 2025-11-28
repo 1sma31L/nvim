@@ -3,8 +3,6 @@ return {
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
     local dashboard = require 'alpha.themes.dashboard'
-
-    -- Replace this with your custom ASCII logo
     dashboard.section.header.val = {
       '         .-.',
       '       __/   (',

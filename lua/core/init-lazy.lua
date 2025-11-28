@@ -1,6 +1,6 @@
 require('lazy').setup({
   { import = 'plugins' },
-  require 'colors.catppuccin',
+  require 'colors.gruvbox',
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
@@ -20,3 +20,5 @@ require('lazy').setup({
     },
   },
 })
+-- vim.o.background = "dark" -- or "light" for light mode
+-- vim.cmd([[colorscheme gruvbox]])
