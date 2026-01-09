@@ -4,17 +4,23 @@ return {
   config = function()
     local dashboard = require 'alpha.themes.dashboard'
     dashboard.section.header.val = {
-      '         .-.',
-      '       __/   (',
-      "     , '-.____\\",
-      "      u=='/  \\",
-      '         /_/  \\',
-      "       .-''   |",
-      '      (  ____/_____',
-      '      _>_/.--------',
-      '      \\\\\\///',
-      '       //',
-      '      //',
+      -- '         .-.',
+      -- '       __/   (',
+      -- "     , '-.____\\",
+      -- "      u=='/  \\",
+      -- '         /_/  \\',
+      -- "       .-''   |",
+      -- '      (  ____/_____',
+      -- '      _>_/.--------',
+      -- '      \\\\\\///',
+      -- '       //',
+      -- '      //',
+
+      '    /\\',
+      '   /  \\',
+      '  / /\\ \\',
+      ' / ____ \\',
+      '/_/    \\_\\',
     }
     dashboard.section.buttons.val = {
       dashboard.button('e', 'New File', ':ene <BAR> startinsert<CR>'),

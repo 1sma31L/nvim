@@ -21,12 +21,13 @@ return {
       }
     end,
     formatters_by_ft = {
-      typescript = { 'prettier' },
+      lua = { 'stylua' },
+      typescript = { 'prettiers', 'prettier' },
       javascript = { 'prettier' },
       typescriptreact = { 'prettier' },
       javascriptreact = { 'prettier' },
-      json = { 'prettier' },
-      lua = { 'stylua' },
+      json = { 'prettiers', 'prettier' },
+      python = { 'pyright' },
       c = { 'clangd' },
     },
   },

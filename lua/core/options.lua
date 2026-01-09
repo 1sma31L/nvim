@@ -12,7 +12,7 @@ vim.schedule(function()
 end)
 
 vim.g.have_nerd_font = true
-
+vim.opt.colorcolumn = '80'
 vim.opt.rtp:prepend(lazypath)
 vim.opt.number = true
 vim.opt.relativenumber = true

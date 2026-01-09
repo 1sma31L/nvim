@@ -20,8 +20,6 @@ return {
           '.git',
           '.next',
           'node_modules',
-          'dist',
-          'build',
           '.cache',
         },
       },
