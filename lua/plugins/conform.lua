@@ -28,6 +28,7 @@ return {
       javascriptreact = { 'prettier' },
       json = { 'prettiers', 'prettier' },
       python = { 'pyright' },
+      astro = { 'prettier' },
       c = { 'clangd' },
     },
   },

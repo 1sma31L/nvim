@@ -1,28 +1,32 @@
+-- ~/.config/nvim/lua/colors/catppuccin.lua
 return {
-  'catppuccin/nvim',
-  name = 'catppuccin',
-  priority = 1000,
-
-  config = function()
-    require('catppuccin').setup {
-      flavour = 'auto', -- latte, frappe, macchiato, mocha
-      background = { -- :h background
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
+    lazy = false,
+    priority = 1000,
+    init = function()
+      -- Set initial theme
+      vim.cmd.colorscheme 'catppuccin-mocha'
+    end,
+    opts = {
+      flavour = 'mocha', -- mocha, macchiato, frappe, latte
+      background = {
         light = 'latte',
         dark = 'mocha',
       },
-      transparent_background = false, -- disables setting the background color.
-      show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-      term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+      transparent_background = false,
+      show_end_of_buffer = false,
+      term_colors = true,
       dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
+        enabled = false,
         shade = 'dark',
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+        percentage = 0.15,
       },
-      no_italic = false, -- Force no italic
-      no_bold = false, -- Force no bold
-      no_underline = false, -- Force no underline
-      styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { 'italic' }, -- Change the style of comments
+      no_italic = false,
+      no_bold = false,
+      styles = {
+        comments = { 'italic' },
         conditionals = { 'italic' },
         loops = {},
         functions = {},
@@ -34,26 +38,62 @@ return {
         properties = {},
         types = {},
         operators = {},
-        -- miscs = {}, -- Uncomment to turn off hard-coded styles
       },
       color_overrides = {},
       custom_highlights = {},
-      default_integrations = true,
       integrations = {
         cmp = true,
         gitsigns = true,
         nvimtree = true,
+        telescope = true,
         treesitter = true,
-        notify = false,
-        mini = {
-          enabled = true,
-          indentscope_color = '',
-        },
-        -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+        neotree = true,
+        which_key = true,
+        -- For more integrations, see: https://github.com/catppuccin/nvim#integrations
       },
-    }
-
-    -- setup must be called before loading
-    vim.cmd.colorscheme 'catppuccin'
-  end,
+    },
+    keys = {
+      -- Toggle between dark and light
+      {
+        '<leader>tt',
+        function()
+          local current = vim.g.colors_name or ''
+          if current == 'catppuccin-latte' then
+            vim.cmd.colorscheme 'catppuccin-mocha'
+            vim.o.background = 'dark'
+            print '🌙 Switched to Dark theme (Mocha)'
+          else
+            vim.cmd.colorscheme 'catppuccin-latte'
+            vim.o.background = 'light'
+            print '🌞 Switched to Light theme (Latte)'
+          end
+        end,
+        desc = 'Toggle dark/light theme',
+      },
+      -- Direct dark theme
+      {
+        '<leader>td',
+        '<cmd>colorscheme catppuccin-mocha<CR>',
+        desc = 'Dark theme (Mocha)',
+      },
+      -- Direct macchiato (darker than mocha)
+      {
+        '<leader>tm',
+        '<cmd>colorscheme catppuccin-macchiato<CR>',
+        desc = 'Dark theme (Macchiato)',
+      },
+      -- Direct light theme
+      {
+        '<leader>tl',
+        '<cmd>colorscheme catppuccin-latte<CR>',
+        desc = 'Light theme (Latte)',
+      },
+      -- Frappe (another dark variant)
+      {
+        '<leader>tf',
+        '<cmd>colorscheme catppuccin-frappe<CR>',
+        desc = 'Dark theme (Frappe)',
+      },
+    },
+  },
 }

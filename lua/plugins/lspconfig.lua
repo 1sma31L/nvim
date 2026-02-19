@@ -213,6 +213,7 @@ return {
       --     },
       --   },
       -- },
+      docker_language_server = {},
     }
 
     -- Ensure the servers and tools above are installed

@@ -41,6 +41,10 @@ return { -- Autocompletion
     local luasnip = require 'luasnip'
     luasnip.config.setup {}
 
+    require('luasnip.loaders.from_lua').lazy_load {
+      paths = { vim.fn.stdpath 'config' .. '/lua/snippets' },
+    }
+
     cmp.setup {
       snippet = {
         expand = function(args)
